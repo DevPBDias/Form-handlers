@@ -11,7 +11,7 @@ function BtnForm({ nameBtn, path }: IButtonProps) {
   return (
     <button
       type="button"
-      className="text-lg p-2 bg-slate-800 text-white rounded-lg shadow-lg
+      className="text-lg p-4 m-6 bg-slate-800 text-white rounded-lg shadow-lg
        hover:bg-slate-500 hover:text-black"
       onClick={ () => navigate(`/${path}`) }
     >
