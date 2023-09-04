@@ -34,8 +34,13 @@ function LoginPassword() {
 
   const isFormValid = () => {
     const errors = [];
+    const regex = /\S+@\S+\.\S+/;
+    const validEmail = regex.test(formData.email);
     if (formData.email === '') {
       errors.push('O campo de Login é obrigatório');
+    }
+    if (!validEmail) {
+      errors.push('E-mail em formato inválido');
     }
     if (formData.password === '') {
       errors.push('O campo de Senha é obrigatório');
