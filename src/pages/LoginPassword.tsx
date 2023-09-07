@@ -37,13 +37,13 @@ function LoginPassword() {
     const regex = /\S+@\S+\.\S+/;
     const validEmail = regex.test(formData.email);
     if (formData.email === '') {
-      errors.push('O campo de Login é obrigatório');
+      errors.push('E-mail obrigatório');
     }
     if (!validEmail) {
-      errors.push('E-mail em formato inválido');
+      errors.push('E-mail inválido');
     }
     if (formData.password === '') {
-      errors.push('O campo de Senha é obrigatório');
+      errors.push('Senha obrigatória');
     }
     setErrorMsg(errors);
     return errors.length === 0;
